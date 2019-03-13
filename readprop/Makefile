@@ -54,7 +54,7 @@ all: ${BACNET_LIB_TARGET} Makefile ${TARGET_BIN}
 ${TARGET_BIN}: ${OBJS} Makefile ${BACNET_LIB_TARGET}
 	${CC} ${PFLAGS} ${OBJS} ${LFLAGS} -o $@
 	size $@
-	cp $@ ../bin
+	cp $@ ../bacrp
 
 lib: ${BACNET_LIB_TARGET}
 
