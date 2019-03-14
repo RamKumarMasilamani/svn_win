@@ -10,8 +10,8 @@
 # Assumes rm and cp are available
 
 BACNET_PORT_DIR = ../ports/${BACNET_PORT}
-BACNET_OBJECT = ../demo/object
-BACNET_HANDLER = ../demo/handler
+BACNET_OBJECT = ../readprop/object
+BACNET_HANDLER = ../readprop/handler
 BACNET_CORE = ../src
 BACNET_INCLUDE = ../include
 # compiler configuration
