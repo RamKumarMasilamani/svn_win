@@ -69,5 +69,5 @@ clean:
 	$(MAKE) -s -C readprop clean
 
 install:
-	sudo cp bacrp /usr/bin
+	cp bacrp /usr/bin
 
