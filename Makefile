@@ -70,5 +70,7 @@ clean:
 
 install:
 	mkdir -p ../install/usr/bin
+	mkdir -p ../install/usr/lib
 	cp bacrp ../install/usr/bin
+	cp json-c/libjson-c.so ../install/usr/lib
 
