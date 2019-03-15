@@ -73,5 +73,5 @@ install:
 	mkdir -p ../install/usr/lib
 	cp bacrp ../install/usr/bin
 	cp json-c/libjson-c.so ../install/usr/lib
-	cp json-c/libjson-c.so ../install/usr/lib/arm-linux-gnueabihf
+	#cp json-c/libjson-c.so ../install/usr/lib/arm-linux-gnueabihf
 
