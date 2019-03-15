@@ -70,5 +70,5 @@ clean:
 
 install:
 	mkdir -p ../install/usr/bin
-	cp bacrp /usr/bin
+	cp bacrp ../install/usr/bin
 
