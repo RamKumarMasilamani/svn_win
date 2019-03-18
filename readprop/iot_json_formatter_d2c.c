@@ -10,7 +10,7 @@ D2C_DATA *head_ptr_d2c_data_list = NULL;
 
 void json_formatter(IOT_DEVICE_OBJECT_D2C dev){
 
-    char bacnet_prefix[20];
+    char bacnet_prefix[50];
     char buff[50];
     uint8_t count = 0;
     unsigned int obj_counter = 0;
@@ -40,11 +40,12 @@ void json_formatter(IOT_DEVICE_OBJECT_D2C dev){
     if(head_ptr_d2c_data_list != NULL)
         d2c_data = *head_ptr_d2c_data_list;
     memset(buff, 0, 50);
-    strcpy(bacnet_prefix, "BACNET_");
+    strcpy(bacnet_prefix, "bacnet_");
     if(sprintf(buff,"%d",dev->device_id))
     strcat(bacnet_prefix, buff);
     //json_object_object_add(devobj,"object identifier", json_object_new_string(bacnet_prefix)); debatable
-    json_object_object_add(devobj,"device_id", json_object_new_string("ravi-test"));
+    //json_object_object_add(devobj,"device_id", json_object_new_string("ravi-test"));
+    json_object_object_add(devobj,"device_id", json_object_new_string(bacnet_prefix));
     json_object_object_add(devobj,"timestamp", json_object_new_string(dev->ts_current));
 
     prop_list = dev->iot_prop_list;
