@@ -600,16 +600,7 @@ int main(
     dlenv_init();
     atexit(datalink_cleanup);
 #ifdef IOT
-while(1){
-    if(!send_whois_to_nw(&dest, -1,-1)){
-        printf("continue?(y/n):");
-        if(getchar()=='n')
-            exit(0);
-        while(getchar()!='\n');
-    }
-    else
-        break;
-}
+while(!send_whois_to_nw(&dest, -1,-1));
     // printf("send again\n");
 
         /* configure the timeout values */
