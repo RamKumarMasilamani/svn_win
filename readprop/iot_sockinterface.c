@@ -50,12 +50,13 @@ int init_sock_interface(void)
 	server_addr.sin_port = htons(5000);
 	server_addr.sin_addr = *((struct in_addr *)host->h_addr);
 	bzero(&(server_addr.sin_zero),8);
-
+        printf("waiting for peer device to connect\n");
     while(connect(sock, (struct sockaddr *)&server_addr, sizeof(struct sockaddr)) == -1){
-        perror(" Server connection established Connect...retry?(y/n)");
+        /*perror(" Server connection established Connect...retry?(y/n)");
         if(getchar() == 'n')
-            exit(1);
+            exit(1);*/
     }
+	printf("peer device connected\n");
 
 	// if (connect(sock, (struct sockaddr *)&server_addr,
 	// 	    sizeof(struct sockaddr)) == -1)
