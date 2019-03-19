@@ -600,9 +600,9 @@ int main(
     dlenv_init();
     atexit(datalink_cleanup);
 #ifdef IOT
-    printf("waiting for peer device connection...\n");
+    printf("send 'who-is' to nw...waiting for responses\n");
 while(!send_whois_to_nw(&dest, -1,-1));
-    printf("peer device connected...\n");
+    printf("response received...\n");
     // printf("send again\n");
 
         /* configure the timeout values */
